@@ -12,7 +12,7 @@ export function IsometricGrid({ tiles, config }: IsometricGridProps) {
     <>
       {sortedTiles.map((tile, index) => (
         <IsometricTile
-          key={`tile-${tile.gridX}-${tile.gridY}`}
+          key={`tile-${tile.gridX}-${tile.gridY}-${tile.z}`}
           tile={tile}
           config={config}
         />

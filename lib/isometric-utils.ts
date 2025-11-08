@@ -27,7 +27,11 @@ export function calculateDepth(
   gridY: number,
   z: number
 ): number {
-  return gridX + gridY - (z * 0.01);
+  // Higher z should render later (in front),
+  // so add a small z component to the depth key.
+  // The small factor maintains primary ordering by grid position
+  // while ensuring stacked layers sort correctly.
+  return gridX + gridY + (z * 0.01);
 }
 
 /**

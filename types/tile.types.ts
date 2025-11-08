@@ -5,6 +5,7 @@ export interface TileData {
   gridY: number;
   z: number;
   type: string;
+  height?: number;
   color?: number;
   outlineColor?: number;
 }
