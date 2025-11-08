@@ -4,8 +4,9 @@ export interface TileData {
   gridX: number;
   gridY: number;
   z: number;
-  color: number;
-  type?: string;
+  type: string;
+  color?: number;
+  outlineColor?: number;
 }
 
 export interface ScreenCoordinates {
