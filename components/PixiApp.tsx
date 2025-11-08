@@ -19,10 +19,8 @@ export default function PixiApp() {
     <Application
       width={800}
       height={600}
-      options={{
-        backgroundColor: 0x2c3e50,
-        antialias: true,
-      }}
+      backgroundColor={0x2c3e50}
+      antialias={true}
     >
       <pixiContainer>
         <IsometricGrid tiles={GRID_DATA} config={CONFIG} />
