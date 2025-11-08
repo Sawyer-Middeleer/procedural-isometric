@@ -11,7 +11,7 @@ const CONFIG: TileConfig = {
   tileHeight: 50,
   tileDepth: 30,
   originX: 400,
-  originY: 150,
+  originY: 400,
 };
 
 export default function PixiApp() {

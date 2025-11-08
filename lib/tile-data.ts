@@ -36,9 +36,9 @@ function generateStackedTiles(
 
 export const GRID_DATA: TileData[] = [
   // Row 0 (back) - ground level
-  { gridX: 0, gridY: 0, z: 0, type: 'road', outlineColor: 0xffffff },
-  { gridX: 1, gridY: 0, z: 0, type: 'road', outlineColor: 0xffffff },
-  { gridX: 2, gridY: 0, z: 0, type: 'road', outlineColor: 0xffffff },
+  { gridX: 0, gridY: 0, z: 0, type: 'ground', outlineColor: 0x95a5a6 },
+  { gridX: 1, gridY: 0, z: 0, type: 'ground', outlineColor: 0x95a5a6 },
+  { gridX: 2, gridY: 0, z: 0, type: 'ground', outlineColor: 0x95a5a6 },
 
   // Row 1 (middle) - stacked blocks at different heights
   ...generateStackedTiles(0, 1, 40, 'block', 20), // Stack up to 40 (3 layers: 0, 20, 40)
@@ -46,14 +46,13 @@ export const GRID_DATA: TileData[] = [
   ...generateStackedTiles(2, 1, 0, 'block', 20),  // Single layer at ground (just 0)
 
   // Row 2 (front) - ground level
-  { gridX: 0, gridY: 2, z: 0, type: 'road', outlineColor: 0xffffff },
-  { gridX: 1, gridY: 2, z: 0, type: 'road', outlineColor: 0xffffff },
-  { gridX: 2, gridY: 2, z: 0, type: 'road', outlineColor: 0xffffff },
+  { gridX: 0, gridY: 2, z: 0, type: 'ground', outlineColor: 0x95a5a6 },
+  { gridX: 1, gridY: 2, z: 0, type: 'ground', outlineColor: 0x95a5a6 },
+  { gridX: 2, gridY: 2, z: 0, type: 'ground', outlineColor: 0x95a5a6 },
 ];
 
 export const TILE_TYPES = {
   block: 0x2c3e50,
   grass: 0x2ecc71,
-  water: 0x3498db,
-  road: 0x95a5a6,
+  ground: 0x95a5a6,
 } as const;
