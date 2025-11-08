@@ -1,6 +1,6 @@
-# Procedural Graphics - Isometric City
+# Procedural Graphics - Isometric System
 
-A procedural isometric city illustration using PixiJS React and Next.js. This project implements a 3x3 grid of isometric tiles with z-axis (elevation) support as the foundation for a larger procedural city system.
+A procedural isometric illustration using PixiJS React and Next.js. This project implements a 3x3 grid of isometric tiles with z-axis (elevation) support as the foundation for a larger procedural system.
 
 ## Features
 
