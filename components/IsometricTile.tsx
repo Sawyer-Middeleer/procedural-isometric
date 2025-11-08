@@ -17,43 +17,39 @@ export function IsometricTile({ tile, config }: IsometricTileProps) {
     g.clear();
 
     // Draw top face (diamond)
-    g.beginFill(color);
     g.moveTo(0, -tileHeight / 2);
     g.lineTo(tileWidth / 2, 0);
     g.lineTo(0, tileHeight / 2);
     g.lineTo(-tileWidth / 2, 0);
     g.closePath();
-    g.endFill();
+    g.fill(color);
 
     // Draw side faces if elevated
     if (z > 0) {
       // Left face (darkest)
-      g.beginFill(darkenColor(color, 0.6));
       g.moveTo(-tileWidth / 2, 0);
       g.lineTo(0, tileHeight / 2);
       g.lineTo(0, tileHeight / 2 + z);
       g.lineTo(-tileWidth / 2, z);
       g.closePath();
-      g.endFill();
+      g.fill(darkenColor(color, 0.6));
 
       // Right face (medium)
-      g.beginFill(darkenColor(color, 0.8));
       g.moveTo(tileWidth / 2, 0);
       g.lineTo(0, tileHeight / 2);
       g.lineTo(0, tileHeight / 2 + z);
       g.lineTo(tileWidth / 2, z);
       g.closePath();
-      g.endFill();
+      g.fill(darkenColor(color, 0.8));
     }
 
     // Optional: Draw outline for clarity
-    g.lineStyle(2, 0x000000, 0.3);
     g.moveTo(0, -tileHeight / 2);
     g.lineTo(tileWidth / 2, 0);
     g.lineTo(0, tileHeight / 2);
     g.lineTo(-tileWidth / 2, 0);
     g.closePath();
-    g.stroke();
+    g.stroke({ width: 2, color: 0x000000, alpha: 0.3 });
   }, [color, z, tileWidth, tileHeight]);
 
   return (
